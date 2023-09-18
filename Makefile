@@ -5,6 +5,9 @@ include .env
 up:
 	kind create cluster --name flux-project
 
+down:
+	kind delete cluster --name flux-project
+
 set-kind-context:
 	kubectl cluster-info --context kind-flux-project
 
