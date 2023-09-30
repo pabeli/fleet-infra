@@ -28,3 +28,19 @@ spec:
         namespace: flux-system
       version: 0.10.3
   interval: 1m0s
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: starboard
+  namespace: starboard
+spec:
+  interval: 3m
+  path: ./kustomize
+  prune: true
+  sourceRef:
+    kind: HelmRepository
+    name: starboard-operator
+  targetNamespace: default
+  timeout: 3m0s
+  wait: true
