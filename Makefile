@@ -14,7 +14,7 @@ set-kind-context:
 set-git-variables:
 	export GITHUB_USER=${GITHUB_USER} ; export GITHUB_TOKEN=${GITHUB_TOKEN}
 
-prepare-flux:
+bootstrap-flux:
 	flux bootstrap github \
 	--owner=${GITHUB_USER} \
 	--repository=fleet-infra \
