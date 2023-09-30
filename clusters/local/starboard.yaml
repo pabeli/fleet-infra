@@ -39,7 +39,7 @@ spec:
   path: ./kustomize
   prune: true
   sourceRef:
-    kind: HelmRepository
+    kind: GitRepository
     name: starboard-operator
   targetNamespace: default
   timeout: 3m0s
